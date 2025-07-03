@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=visibility,visibility_off"
+    />
+    <link rel="stylesheet" href="../css/login.css">
+  </head>
+  <body>
+    <form action="" id="loginUser">
+      <h2>Log In</h2>
+      <input type="email" placeholder="Email" required id="email" />
+      <div class="passVisibility">
+        <input type="password" placeholder="Password" required oninput="testPassword()" id="password" />
+        <button type="button" onclick="showPassword()" id="visibility"></button>
+        <small id="error"> </small>
+    </div>
+      <button type="submit">Log In</button>
+
+      <p>Don't have an account yet? <a href="../pages/register.html">Register</a></p>
+    </form>
+  </body>
+</html>
+
+<script src="../js/login.js"></script>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=visibility,visibility_off"
+    />
+    <link rel="stylesheet" href="../css/register.css">
+  </head>
+  <body>
+    <form action="" id="registerUser">
+      <h2>Register</h2>
+      <input type="text" placeholder="Name" required id="name" />
+      <input
+        type="text"
+        placeholder="Username"
+        required
+        id="userName"
+        oninput="checkUsername()"
+      />
+      <small id="userHint"></small>
+      <input type="email" placeholder="Email" required id="email" />
+      <div class="passVisibility">
+        <input
+          type="password"
+          placeholder="Password"
+          required
+          oninput="testPassword()"
+          id="password"
+        />
+        <button
+          type="button"
+          onclick="showPassword('password', 'visibility1')"
+          id="visibility1"
+        ></button>
+        <small id="error"> </small>
+      </div>
+
+      <div class="passVisibility">
+        <input
+          type="password"
+          placeholder="Confirm Password"
+          required
+          id="confirmPassword"
+          oninput="passMatch()"
+        />
+        <button
+          type="button"
+          onclick="showPassword('confirmPassword', 'visibility2')"
+          id="visibility2"
+        ></button>
+        <small id="matchMessage"></small>
+      </div>
+      <button type="submit">Register</button>
+
+      <p>Already have an account? <a href="../pages/login.html">Log-in</a></p>
+    </form>
+  </body>
+</html>
+
+<script src="../js/register.js"></script>
